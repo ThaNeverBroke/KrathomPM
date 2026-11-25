@@ -54,10 +54,11 @@ Open the dashboard, add your project, press Start. No `npm install`, no config f
 
 ## 📥 Install
 
-Pick your system. You only need Python. Node.js is optional (for `.js` projects) and `cloudflared` is optional (for the public link).
+Choose your system below. You only need Python. Node.js is optional (for `.js` projects) and `cloudflared` is optional (for the public link).
 
-<details open>
-<summary><b>📱 Termux (Android)</b></summary>
+
+### 📱 Termux (Android)
+
 
 ```bash
 pkg update && pkg install -y python git cloudflared
@@ -69,10 +70,10 @@ python main.py
 
 To use folders on your phone storage, run `termux-setup-storage` once.
 
-</details>
 
-<details>
-<summary><b>🪟 Windows (PowerShell)</b></summary>
+
+### 🪟 Windows (PowerShell)
+
 
 ```powershell
 winget install -e --id Python.Python.3.12
@@ -89,10 +90,10 @@ cd KrathomPM
 python main.py
 ```
 
-</details>
 
-<details>
-<summary><b>🐧 Linux and Raspberry Pi (Debian / Ubuntu)</b></summary>
+
+### 🐧 Linux and Raspberry Pi (Debian / Ubuntu)
+
 
 ```bash
 sudo apt update && sudo apt install -y python3 python3-pip git curl
@@ -107,7 +108,6 @@ python3 main.py
 
 On newer Debian and Raspberry Pi OS, pip refuses to install packages system wide. Run `export PIP_BREAK_SYSTEM_PACKAGES=1` before starting KratomPM so it can install what your projects need.
 
-</details>
 
 ## 🏁 First start
 
@@ -118,10 +118,11 @@ On newer Debian and Raspberry Pi OS, pip refuses to install packages system wide
 
 Settings and projects are saved in `kratompm_data.json` next to the script. Uploaded projects go into the `projects/` folder.
 
-## ⚙️ Start automatically
+## ⚙️ Start automatically on boot
 
-<details>
-<summary><b>Windows</b></summary>
+
+### Windows
+
 
 Press `Win + R`, run `shell:startup`, and create `kratompm-start.bat` in that folder:
 
@@ -131,10 +132,10 @@ cd /d "C:\path\to\KrathomPM"
 python main.py
 ```
 
-</details>
 
-<details>
-<summary><b>Linux / Raspberry Pi (systemd)</b></summary>
+
+### Linux / Raspberry Pi (systemd)
+
 
 Create `/etc/systemd/system/kratompm.service` (replace `pi` with your user name):
 
@@ -164,14 +165,13 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now kratompm
 ```
 
-</details>
 
-<details>
-<summary><b>Termux</b></summary>
+
+### Termux
+
 
 Install the Termux:Boot app and put a script in `~/.termux/boot/` that runs `cd ~/KrathomPM && python main.py`.
 
-</details>
 
 ## 🔔 Telegram notification
 
